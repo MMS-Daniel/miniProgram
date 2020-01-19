@@ -113,7 +113,7 @@
 以上为常规的基建配置 授权可参考mine页面 引入了commonets定义的auth组件，实际业务更改样式和基础逻辑，具体使用已注明
 
 ## UI库推荐 
-> 直接放入commponts中即可
+> 直接将所需的组件放入\public\components中 实际页面引入即可
 
 #### VantUI-适合电商类
 Vant Weapp 是移动端 Vue 组件库 Vant 的小程序版本，两者基于相同的视觉规范，提供一致的 API 接口，助力开发者快速搭建小程序应用。
@@ -124,7 +124,7 @@ GitHub地址：https://youzan.github.io/vant-weapp/#/intro
 iView是TalkingData发布的一款高质量的基于Vue.js组件库，而iView weapp则是它们的小程序版本。
 
 GitHub地址：https://github.com/TalkingData/iview-weapp
-npm下载：npm i iview-weapp
+
 
 #### MinUI
 
