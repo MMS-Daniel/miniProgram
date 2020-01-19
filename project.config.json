@@ -1,0 +1,61 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false,
+		"coverView": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.9.4",
+	"appid": "wxa038f19caf0db361",
+	"projectname": "%E6%9C%A8%E6%A3%89%E6%BC%94%E8%AE%B2",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 1,
+			"list": [
+				{
+					"id": -1,
+					"name": "我的页面",
+					"pathName": "pages/tab/mine/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "授权页",
+					"pathName": "pages/auth/index",
+					"scene": null
+				}
+			]
+		}
+	}
+}

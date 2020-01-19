@@ -1,0 +1,12 @@
+<!--public/components/auth/index.wxml-->
+ <view class="auth fadeIn" wx:if='{{show}}'>
+    <view class='auth-dialog bounceInDown'>
+      <view class='auth-title'>
+        <text>你还未登陆喔</text>
+      </view>
+      <view class='auth-btns'>
+        <button class='login-fail main-border-color main-font-color'  bindtap="closeDialog">暂不登录</button>
+         <button class="login-success main-bg-color" open-type="getUserInfo" bindgetuserinfo="getUserInfo" form-type='submit'>授权注册</button>
+      </view>
+    </view>
+  </view>

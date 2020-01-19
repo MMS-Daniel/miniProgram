@@ -1,0 +1,28 @@
+/* pages/tab/mine/index.wxss */
+.header{
+  height: 180rpx;
+}
+.header .user{
+  display: flex;
+  padding: 15rpx 40rpx;
+  align-content: center;
+  box-sizing: border-box;
+}
+.user .user-img{
+  width: 120rpx;
+  height: 120rpx;
+  margin-right:25rpx;
+  border-radius: 50%;
+  background: #fff;
+  overflow:hidden;
+}
+.user .user-name{
+  line-height: 120rpx;
+  color:#fff;
+  font-size:32rpx;
+}
+.user-img image{
+  width: 100%;
+  height: 100%;
+}
+

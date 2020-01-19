@@ -1,0 +1,20 @@
+<!--pages/tab/mine/index.wxml-->
+<view class="mine-box">
+
+  <view class="header main-bg-color">
+    <view class='user'>
+      <view class="user-img">
+        <image src="{{userInfo.avatarUrl}}"></image>
+      </view>
+      <view class="user-name" wx:if='{{!userInfo}}' bindtap="showAuth">
+        点击登录
+      </view>
+      <view class="user-name" wx:else>
+        {{userInfo.nickName}}
+      </view>
+    </view>
+  </view>
+
+  <authDialog show='{{doAuth}}' loginSuccess='getUserInfo'></authDialog>
+
+</view>

@@ -1,0 +1,7 @@
+<!--miniprogram/custom-tab-bar/index.wxml-->
+<cover-view class="tab-bar" wx:if="{{show}}">
+  <cover-view wx:for="{{list}}" wx:key="index" class="tab-bar-item" data-path="{{item.pagePath}}" data-type="{{item.linkType}}" data-index="{{index}}" bindtap="switchTab">
+    <cover-image src="{{selected === index ? item.selectedIconPath : item.iconPath}}" class="{{item.linkType && 'big-icon'}}"></cover-image>
+    <cover-view style="color: {{selected === index ? selectedColor : color}}">{{item.text}}</cover-view>
+  </cover-view>
+</cover-view>

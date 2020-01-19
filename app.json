@@ -1,0 +1,30 @@
+{
+  "pages": [
+    "pages/tab/home/index",
+    "pages/tab/mine/index"
+  ],
+  "tabBar": {
+    "custom": true,
+    "color": "#000000",
+    "selectedColor": "#000000",
+    "backgroundColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/tab/home/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/tab/mine/index",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3CC1CC",
+    "navigationBarTitleText": "若单页没有设置页面标题都用这个",
+    "navigationBarTextStyle": "white"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

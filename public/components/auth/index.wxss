@@ -1,0 +1,43 @@
+/* public/components/auth/index.wxss */
+@import '/app.wxss';
+.auth{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  left:0;top:0;
+  background: rgba(0, 0, 0, .5)
+}
+.auth-dialog{
+  position: absolute;
+  width: 500rpx;
+  height: 200rpx;
+  background: #fff;
+  margin: auto;
+  top:0;right:0;bottom:0;left:0;
+  border-radius: 10rpx;
+  padding: 30rpx 15rpx;
+  box-sizing: border-box;
+}
+.auth-title{
+  text-align: center;
+  font-size:32rpx;
+}
+.auth-btns{
+  display: flex;
+  margin-top: 20rpx;
+}
+.auth-btns button{
+  width: 180rpx;
+  line-height: 80rpx;
+  border-radius: 20rpx;
+  font-size:24rpx;
+  font-weight: 0;
+  padding: 0;
+}
+.auth-btns .login-fail{
+  background: #fff;
+  border:1px solid;
+}
+.auth-btns .login-success{
+  color:#fff;
+}
