@@ -15,6 +15,6 @@
     </view>
   </view>
 
-  <authDialog show='{{doAuth}}' loginSuccess='getUserInfo'></authDialog>
+  <authDialog show='{{doAuth}}' loginSuccess='onLoad' loginFail='tipsUser'></authDialog>
 
 </view>

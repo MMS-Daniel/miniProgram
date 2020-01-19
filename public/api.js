@@ -4,8 +4,11 @@
  * API_PREFIX   
  **/
 import request from './request.js'
-
-const API_PREFIX = 'https://act.test-mmsay.com/api-album/'
+const HOST = {
+   DEV:'测试环境域名',
+   PEV:'正式环境域名'
+}
+const API_PREFIX = HOST['DEV'];
 const API_LIST = {
   //网盘上传
   netdisc: {
@@ -44,20 +47,20 @@ class MMSAPI {
     return this._request.POST({
       url: API_LIST.user.auth,
       data
-    }).then(res => res.data).catch(res => res.data)
+    })
   }
   // 刷新token
   refreshToken(data) {
     return this._request.POST({
       url: API_LIST.user.refreshToken,
       data
-    }).then(res => res).catch(res => res.data)
+    })
   }
   // 查询用户基本信息
   getInfo() {
     return this._request.POST({
       url: API_LIST.user.getInfo
-    }).then(res => res.data).catch(res => res.data)
+    })
   }
 }
 

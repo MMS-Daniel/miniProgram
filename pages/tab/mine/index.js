@@ -56,5 +56,9 @@ Page({
     _this.setData({
       doAuth:true
     })
+  },
+  //用户选择暂不登录 关闭弹框后的回调函数
+  tipsUser:function(){
+    //提示 等
   }
 })
