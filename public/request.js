@@ -3,13 +3,17 @@ class request {
     this._header = o.header || {};
     this.statusCode = o.code || 'SUCCESS';
     this.prefix = o.prefix || '';
-    this.noLogin = o.code_TOKENERROR || 'NO_LOGIN';
+    this.noLogin = o.code_TOKENERROR || 'TOKEN_ERROR';
     this._errorHandler = (res,url) => {
-      console.error(url + '---接口错误:' + res.errMsg)
+      if (res.data && res.data.code && res.data.code!=this.noLogin){
+        console.error(url + '---接口错误:' + res.errMsg)
+      }
+      
     };
   }
   GET(o) {
     return this.requestAll({
+      noprefix: o.noprefix,
       method: 'GET',
       url:o.url,
       data: o.data || {},
@@ -18,6 +22,7 @@ class request {
   }
   POST(o) {
     return this.requestAll({
+      noprefix: o.noprefix,
       method: 'POST',
       url: o.url,
       data: o.data || {},
@@ -32,8 +37,9 @@ class request {
   requestAll(o) {
     return new Promise((resolve, reject) => {
       o.header['OAuth-Token']=wx.getStorageSync('token');
+      console.log((!o.noprefix ? this.prefix : '') + o.url)
       wx.request({
-        url:o.url,
+        url: (!o.noprefix ? this.prefix:'') + o.url,
         data: o.data,
         header: o.header,
         method: o.method,

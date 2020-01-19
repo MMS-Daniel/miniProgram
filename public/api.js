@@ -5,7 +5,7 @@
  **/
 import request from './request.js'
 const HOST = {
-   DEV:'测试环境域名',
+   DEV:'测试环境',
    PEV:'正式环境域名'
 }
 const API_PREFIX = HOST['DEV'];
@@ -54,13 +54,13 @@ class MMSAPI {
     return this._request.POST({
       url: API_LIST.user.refreshToken,
       data
-    })
+    }).then(res => res.data).catch(res => res.data)
   }
   // 查询用户基本信息
   getInfo() {
     return this._request.POST({
       url: API_LIST.user.getInfo
-    })
+    }).then(res => res.data).catch(res => res.data)
   }
 }
 
